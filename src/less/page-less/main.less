@@ -2,6 +2,21 @@
 @import url('../variable');
 
 main {
+  @keyframes light {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(0.5);
+
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
   .flex();
   height: calc(100% - 60px);
   min-height: calc(100% - 60px);
@@ -105,6 +120,7 @@ main {
 
           &:hover {
             background-color: #767694;
+            box-shadow: 0 0 5px #767694;
 
             button {
               color: @mainWhite;
@@ -165,17 +181,33 @@ main {
           border-radius: @radius;
           margin: 10px;
           cursor: pointer;
+          transition: transform 350ms;
 
           &:hover {
             box-shadow: rgb(94, 94, 94) 0px 0px 30px 5px inset;
+            color: @mainWhite;
+            transform: scale(1.05);
+            border: 1px solid rgb(39, 87, 29);
+
+            .content {
+              i {
+                animation: light 800ms linear infinite;
+              }
+            }
+
+            .desc {
+              display: block;
+            }
           }
 
           .time {
-            padding: 5px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid @gary
           }
 
           .content {
             .flex();
+            padding-top: 8px;
             margin-bottom: 5px;
 
             i {
@@ -185,6 +217,11 @@ main {
 
           .desc {
             display: none;
+            padding: 10px 0;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-indent: 2em;
+            font-weight: 100;
           }
         }
       }

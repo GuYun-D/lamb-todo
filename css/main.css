@@ -1,0 +1,238 @@
+.interactive {
+  color: #fff;
+  border-color: #fff;
+}
+.interactive-hover:hover {
+  color: #fff;
+  border-color: #fff;
+}
+.interactive-focus {
+  text-indent: 1em;
+}
+.interactive-focus:focus {
+  color: #fff;
+  border-color: #fff;
+  box-shadow: 0 0 5px #fff;
+}
+.button {
+  color: #666;
+  border: 1px solid #666;
+  cursor: pointer;
+  transition: all 350ms;
+}
+.button:hover {
+  color: #fff;
+  border-color: #fff;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  height: calc(100% - 60px);
+  min-height: calc(100% - 60px);
+  max-height: calc(100% - 60px);
+  box-sizing: border-box;
+  padding: 20px 10px;
+}
+@keyframes light {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+main .item {
+  flex: 1;
+  height: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  border: 1px solid #666;
+  box-sizing: border-box;
+  margin: 10px;
+  border-radius: 20px;
+}
+main .item .title {
+  padding: 10px;
+  padding-top: 15px;
+  color: #666;
+}
+main .item .title span {
+  margin: 0 10px;
+}
+main .form {
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: right;
+}
+main .form .inp-group {
+  box-sizing: border-box;
+  margin: 20px 0;
+  text-align: left;
+}
+main .form .inp-group span {
+  color: #666;
+  padding: 5px 0;
+  letter-spacing: 0.5em;
+}
+main .form .inp-group input {
+  display: block;
+  width: 98%;
+  height: 28px;
+  background-color: #363646;
+  border: 1px solid #666;
+  border-radius: 2px;
+  color: #fff;
+  transition: all 350ms;
+  margin-top: 15px;
+  text-indent: 1em;
+}
+main .form .inp-group input:focus {
+  color: #fff;
+  border-color: #fff;
+  box-shadow: 0 0 5px #fff;
+}
+main .form .inp-group textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 99%;
+  height: 100px;
+  border: 1px solid #666;
+  outline: none;
+  resize: none;
+  border-radius: 2px;
+  margin-top: 15px;
+  padding: 5px;
+  color: #fff;
+  background-color: #363646;
+  transition: all 350ms;
+  text-indent: 1em;
+}
+main .form .inp-group textarea:focus {
+  color: #fff;
+  border-color: #fff;
+  box-shadow: 0 0 5px #fff;
+}
+main .form button {
+  width: 30%;
+  height: 40px;
+  border-radius: 4px;
+  margin: 0 5px;
+  color: #666;
+  border: 1px solid #666;
+  cursor: pointer;
+  transition: all 350ms;
+}
+main .form button:hover {
+  color: #fff;
+  border-color: #fff;
+}
+main .todo-list {
+  overflow: auto;
+}
+main .todo-list .list {
+  padding: 10px;
+  padding-top: 0;
+}
+main .todo-list .list ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 5px;
+  margin: 10px 0;
+  border-radius: 4px;
+  border: 1px solid #666;
+  cursor: pointer;
+  transition: all 350ms;
+}
+main .todo-list .list ul li:hover {
+  background-color: #767694;
+  box-shadow: 0 0 5px #767694;
+}
+main .todo-list .list ul li:hover button {
+  color: #fff;
+}
+main .todo-list .list ul li:hover span {
+  color: #fff;
+}
+main .todo-list .list ul li:hover i.iconfont {
+  color: #fff;
+}
+main .todo-list .list ul li i.iconfont {
+  font-size: 20px;
+  vertical-align: middle;
+  color: #666;
+  cursor: pointer;
+  transition: all 350ms;
+}
+main .todo-list .list ul li span {
+  flex: 1;
+  padding: 0 10px;
+  font-size: 18px;
+  color: #666;
+  transition: all 350ms;
+  overflow: hidden;
+  white-space: nowrap;
+  text-decoration: dotted;
+}
+main .todo-list .list ul li button {
+  color: #666;
+  cursor: pointer;
+  transition: all 350ms;
+}
+main .todo-history {
+  overflow: auto;
+}
+main .todo-history .history {
+  padding: 10px;
+  padding-top: 0;
+}
+main .todo-history .history ul li {
+  padding: 5px;
+  border: 1px solid #666;
+  color: #666;
+  border-radius: 4px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 350ms;
+}
+main .todo-history .history ul li:hover {
+  box-shadow: #5e5e5e 0px 0px 30px 5px inset;
+  color: #fff;
+  transform: scale(1.05);
+  border: 1px solid #27571d;
+}
+main .todo-history .history ul li:hover .content i {
+  animation: light 800ms linear infinite;
+}
+main .todo-history .history ul li:hover .desc {
+  display: block;
+}
+main .todo-history .history ul li .time {
+  padding: 8px 0;
+  border-bottom: 1px solid #666;
+}
+main .todo-history .history ul li .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-top: 8px;
+  margin-bottom: 5px;
+}
+main .todo-history .history ul li .content i {
+  cursor: pointer;
+}
+main .todo-history .history ul li .desc {
+  display: none;
+  padding: 10px 0;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-indent: 2em;
+  font-weight: 100;
+}
