@@ -1,0 +1,115 @@
+.interactive {
+  color: #fff;
+  border-color: #fff;
+}
+.interactive-hover:hover {
+  color: #fff;
+  border-color: #fff;
+}
+.interactive-focus {
+  text-indent: 1em;
+}
+.interactive-focus:focus {
+  color: #fff;
+  border-color: #fff;
+  box-shadow: 0 0 5px #fff;
+}
+.button {
+  color: #666;
+  border: 1px solid #666;
+  cursor: pointer;
+  transition: all 350ms;
+}
+.button:hover {
+  color: #fff;
+  border-color: #fff;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  height: 60px;
+  padding: 0 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #666;
+}
+header h1 {
+  letter-spacing: 4px;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 20px 0 50px;
+  background-image: -webkit-linear-gradient(left, #648369, #4e5a94, #373156);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header span {
+  margin: 0 30px;
+  vertical-align: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  transition: all 350ms;
+}
+header span:hover {
+  color: #fff;
+}
+header span i.iconfont {
+  font-size: 20px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+header span i.icon-vynil {
+  flex: 1;
+  color: #1677ff;
+  margin: 0 5px;
+}
+header span i.icon-shezhixitongshezhigongnengshezhishuxing-xian {
+  flex: 1;
+  color: #f7b52c;
+  margin: 0 5px;
+}
+header span i.icon-pifu {
+  flex: 1;
+  color: #f7ff8c;
+  margin: 0 5px;
+}
+header input {
+  color: #fff;
+  background-color: #363646;
+  border: 1px solid #666;
+  flex: 10;
+  padding: 6px;
+  border-radius: 4px;
+  transition: all 350ms;
+  text-indent: 1em;
+}
+header input:focus {
+  color: #fff;
+  border-color: #fff;
+  box-shadow: 0 0 5px #fff;
+}
+header button {
+  min-width: 40px;
+  padding: 5px;
+  margin: 0 20px;
+  border-radius: 4px;
+  color: #666;
+  border: 1px solid #666;
+  cursor: pointer;
+  transition: all 350ms;
+}
+header button:hover {
+  color: #fff;
+  border-color: #fff;
+}
+#mask {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}

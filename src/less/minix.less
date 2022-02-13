@@ -1,0 +1,42 @@
+@import url('./variable');
+
+.flex(@direction: row) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: @direction;
+}
+
+.header-item(@color, @flex: 1) {
+  flex: @flex;
+  color: @color;
+  margin: 0 5px;
+}
+
+.interactive {
+  color: @mainWhite;
+  border-color: @mainWhite;
+}
+
+.interactive-hover {
+  &:hover {
+    .interactive();
+  }
+}
+
+.interactive-focus {
+  text-indent: 1em;
+  
+  &:focus {
+    .interactive();
+    box-shadow: 0 0 5px @mainWhite;
+  }
+}
+
+.button {
+  color: @gary;
+  border: 1px solid @gary;
+  cursor: pointer;
+  transition: all 350ms;
+  .interactive-hover()
+}

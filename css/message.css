@@ -1,0 +1,84 @@
+.interactive {
+  color: #fff;
+  border-color: #fff;
+}
+.interactive-hover:hover {
+  color: #fff;
+  border-color: #fff;
+}
+.interactive-focus {
+  text-indent: 1em;
+}
+.interactive-focus:focus {
+  color: #fff;
+  border-color: #fff;
+  box-shadow: 0 0 5px #fff;
+}
+.button {
+  color: #666;
+  border: 1px solid #666;
+  cursor: pointer;
+  transition: all 350ms;
+}
+.button:hover {
+  color: #fff;
+  border-color: #fff;
+}
+@keyframes showMessage {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.message-wrapper {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  width: 500px;
+  animation: showMessage 350ms linear;
+  transform: translateY(-120%);
+  transition: all 300ms;
+}
+.message-wrapper #message {
+  width: 100%;
+  display: none;
+  transform: translateX(-50%);
+  border: 1px solid #666;
+  background-color: #363646;
+  border-radius: 4px;
+}
+.message-wrapper #message .header {
+  padding: 20px 10px 10px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid #fff;
+}
+.message-wrapper #message .body {
+  padding: 20px 10px;
+  padding-bottom: 0;
+  color: #fff;
+}
+.message-wrapper #message .footer {
+  padding: 20px 10px;
+  text-align: right;
+}
+.message-wrapper #message .footer button {
+  padding: 20px;
+  border-radius: 4px;
+  color: #fff;
+  margin: 0 5px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 350ms;
+}
+.message-wrapper #message .footer button:hover {
+  opacity: 1;
+}
+.message-wrapper #message .footer button:first-child {
+  background-color: #5bcda7;
+}
+.message-wrapper #message .footer button:last-child {
+  background-color: #666;
+}
