@@ -1,5 +1,6 @@
 import { getDom } from '../utils'
 import { getState } from './data'
+import { deleteTodoItem } from './delete'
 
 const todoListWrapper = getDom("#todo-list-wrapper")
 const historyWrapper = getDom("#history-wrapper")
@@ -31,6 +32,10 @@ function _createTodoTem(rowData) {
   const span = document.createElement("span")
   const button = document.createElement("button")
   button.innerText = "删除"
+
+  button.addEventListener('click', () => {
+    deleteTodoItem(rowData.id)
+  })
 
   i.className = "iconfont icon-wancheng"
   span.innerText = rowData.title

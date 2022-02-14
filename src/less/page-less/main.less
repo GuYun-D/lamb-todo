@@ -1,6 +1,11 @@
 @import url('../minix');
 @import url('../variable');
 
+@font-face {
+  font-family: gy-history;
+  src: url("../../fonts/HeraldryItalic-mLGXG.ttf");
+}
+
 main {
   @keyframes light {
     0% {
@@ -41,6 +46,20 @@ main {
 
       span {
         margin: 0 10px;
+      }
+
+      .clear-history-button {
+        float: right;
+        cursor: pointer;
+        transition: all 350ms;
+
+        &:hover {
+          color: @mainWhite;
+        }
+
+        span {
+          margin: 0;
+        }
       }
     }
   }
@@ -101,8 +120,15 @@ main {
     }
   }
 
+  .todo-add {
+    flex: 2;
+    transition: flex 350ms;
+  }
+
   .todo-list {
     overflow: auto;
+    flex: 1;
+    transition: flex 350ms;
 
     .list {
       padding: 10px;
@@ -162,11 +188,26 @@ main {
           }
         }
       }
+
+      .list-nothing {
+        font-size: 20px;
+
+        div {
+          margin: 20px 0;
+          line-height: 1.2;
+          color: #40406E;
+
+          &:nth-child(3) {
+            text-indent: 2em;
+          }
+        }
+      }
     }
   }
 
   .todo-history {
     overflow: auto;
+    flex: 2;
 
     .history {
       padding: 10px;
@@ -224,6 +265,14 @@ main {
             font-weight: 100;
           }
         }
+      }
+
+      .nothing-todo {
+        display: none;
+        font-family: gy-history;
+        font-size: 100px;
+        margin-top: 30px;
+        color: #40406E;
       }
     }
   }

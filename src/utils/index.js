@@ -3,8 +3,10 @@ import { dateFormat } from './dateFormat'
 import { getDom } from './getDom'
 import { createMessageTip } from './message'
 import { printer } from './printer'
-import { createMask } from './showMask'
+import { createMask, closeMask } from './showMask'
 import emitter from './eventBus'
+import { createMessageBox } from './messageBox'
+import { throttle } from './throttle'
 
 export {
   localStorage,
@@ -14,5 +16,8 @@ export {
   createMessageTip,
   printer,
   createMask,
-  emitter
+  emitter,
+  createMessageBox,
+  closeMask,
+  throttle
 }

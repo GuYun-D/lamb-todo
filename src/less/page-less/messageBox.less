@@ -1,0 +1,64 @@
+@import url('../variable.less');
+
+.messageBox {
+  min-width: 400px;
+  height: 120px;
+  padding: 10px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  border-radius: @radius;
+  transform: translate(-50%, -50%);
+  background-color: @mainWhite;
+  z-index: 10;
+  opacity: 0;
+  display: none;
+  transition: all 350ms;
+
+  .title {
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+
+  span {
+    i.iconfont {
+      margin: 0 5px;
+      color: orange;
+    }
+
+    span.todo{
+      font-weight: bold;
+
+    }
+  }
+
+  .button-group {
+    margin: 10px;
+    text-align: right;
+
+    button {
+      padding: 8px;
+      border-radius: @radius;
+      color: @mainWhite;
+      cursor: pointer;
+      margin: 10px;
+      opacity: 0.8;
+      transition: all 350ms;
+
+      &:hover{
+        opacity: 1;
+      }
+
+      &:nth-child(1) {
+        background-color: @gary;
+        margin-right: 0;
+      }
+
+      &:nth-child(2) {
+        background-color: @mainColor;
+      }
+    }
+  }
+}

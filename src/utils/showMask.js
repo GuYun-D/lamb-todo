@@ -9,8 +9,14 @@ export function createMask(el, cb) {
   mask.style.display = "block"
 
   mask.addEventListener('click', function () {
-    const id = el.id
-    el.style[maskType[id][0]] = maskType[id][1]
-    mask.style.display = "none"
+    if (el) {
+      const id = el.id
+      el.style[maskType[id][0]] = maskType[id][1]
+      closeMask()
+    }
   })
+}
+
+export const closeMask = () => {
+  mask.style.display = "none"
 }

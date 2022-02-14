@@ -1,6 +1,7 @@
-import { createMessageTip, getDom, dateFormat } from '../utils'
+import { createMessageTip, getDom, dateFormat, throttle } from '../utils'
 import { mutations } from './data'
 import { render } from './render'
+import { todoHistoryEmpty, todoListEmpty, todoListAndtodoAddLayout } from './empty'
 
 const simpleInp = getDom("#simple-inp")
 const detailAddTitle = getDom("#detail-add-title")
@@ -19,7 +20,8 @@ const todoDataTemplate = (title, time, desc) => {
     id: new Date().getTime(),
     title: title,
     time: time,
-    desc: desc
+    desc: desc,
+    done: false
   }
 }
 
@@ -49,11 +51,12 @@ function _validate(focusStr) {
   return true
 }
 
-function _clear() {
-  simpleInp.value = ""
-  detailAddDesc.value = ""
-  detailAddTime.value = ""
-  detailAddTitle.value = ""
+export function clearInput(type) {
+  type
+    ?
+    simpleInp.value = ""
+    :
+    (detailAddDesc.value = "", detailAddTime.value = "", detailAddTitle.value = "")
 }
 
 export const addTodo = (focusStr) => {
@@ -63,12 +66,22 @@ export const addTodo = (focusStr) => {
     const data = todoDataTemplate(detailAddTitle.value, time, detailAddDesc.value)
     mutations.addItem("todoList", data)
     mutations.addItem("todoHistory", data)
+    clearInput()
   } else {
     const data = todoDataTemplate(simpleInp.value, dateFormat(new Date()))
     console.log(data);
     mutations.addItem("todoList", data)
     mutations.addItem("todoHistory", data)
+    clearInput(true)
   }
-  _clear()
   render()
+  todoHistoryEmpty()
+  todoListEmpty()
+  todoListAndtodoAddLayout()
 }
+
+window.addEventListener('keydown', throttle(function (e) {
+  if (e.key === "Enter" && onFocus) {
+    onFocus === focusType.simple ? addTodo() : addTodo("DETAIL")
+  }
+}, 500))

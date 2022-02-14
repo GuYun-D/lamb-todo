@@ -9,7 +9,8 @@ const btns = getDom(".footer", message)
 let messageTimer = null
 
 const messageTypes = {
-  warning: "#f7b52c"
+  warning: "#f7b52c",
+  success: "#67c23a"
 }
 
 export function createMessageTip(text, titleText = "提示", type = "warning", closeTime = 3000) {
@@ -22,10 +23,10 @@ export function createMessageTip(text, titleText = "提示", type = "warning", c
   title.style.color = messageTypes[type]
   title.style.borderColor = messageTypes[type]
 
-  if (type === "warning") {
+  if (titleText === "提示") {
     btns.style.display = "none"
     content.style.paddingBottom = "20px"
-    closeTime = 1500
+    closeTime = 500
   }
 
   if (messageTimer) clearTimeout(messageTimer)
@@ -34,5 +35,7 @@ export function createMessageTip(text, titleText = "提示", type = "warning", c
     // message.style.display = "none"
     wrapper.style.transform = "translateY(-120%)"
     clearTimeout(messageTimer)
+
+    console.log(closeTime);
   }, closeTime)
 }

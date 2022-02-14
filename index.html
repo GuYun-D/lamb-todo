@@ -14,7 +14,7 @@
   <!-- headder start -->
   <header>
     <h1>lamb</h1>
-    <input type="text" placeholder="添加todo  支持回车添加" id="simple-inp">
+    <input type="text" placeholder="添加todo  可回车快速添加" id="simple-inp">
     <button class="simple-btn" id="simple-add-button">添加</button>
     <span id="setting"><i class="iconfont icon-shezhixitongshezhigongnengshezhishuxing-xian"></i>设置</span>
     <span><i class="iconfont icon-pifu"></i>皮肤</span>
@@ -43,7 +43,7 @@
           <textarea id="detail-add-desc"></textarea>
         </div>
 
-        <button>清除</button>
+        <button id="detail-clear-btn">清除</button>
         <button id="detail-add-button">添加</button>
       </div>
     </div>
@@ -54,201 +54,43 @@
       </div>
 
       <div class="list">
-        <ul id="todo-list-wrapper">
-          <li>
-            <i class="iconfont icon-wancheng"></i>
-            <span>今天我要学四级</span>
-            <button>删除</button>
-          </li>
-          <li>
-            <i class="iconfont icon-wancheng"></i>
-            <span>今天我要学四级</span>
-            <button>删除</button>
-          </li>
-          <li>
-            <i class="iconfont icon-wancheng"></i>
-            <span>今天我要学四级</span>
-            <button>删除</button>
-          </li>
-          <li>
-            <i class="iconfont icon-wancheng"></i>
-            <span>今天我要学四级</span>
-            <button>删除</button>
-          </li>
-          <li>
-            <i class="iconfont icon-wancheng"></i>
-            <span>今天我要学四级</span>
-            <button>删除</button>
-          </li>
-          <li>
-            <i class="iconfont icon-wancheng"></i>
-            <span>今天我要学四级</span>
-            <button>删除</button>
-          </li>
-          <li>
-            <i class="iconfont icon-wancheng"></i>
-            <span>今天我要学四级</span>
-            <button>删除</button>
-          </li>
-          <li>
-            <i class="iconfont icon-wancheng"></i>
-            <span>今天我要学四级</span>
-            <button>删除</button>
-          </li>
-          <li>
-            <i class="iconfont icon-wancheng"></i>
-            <span>今天我要学四级</span>
-            <button>删除</button>
-          </li>
-          <li>
-            <i class="iconfont icon-wancheng"></i>
-            <span>今天我要学四级</span>
-            <button>删除</button>
-          </li>
-          <li>
-            <i class="iconfont icon-wancheng"></i>
-            <span>今天我要学四级</span>
-            <button>删除</button>
-          </li>
-          <li>
-            <i class="iconfont icon-wancheng"></i>
-            <span>今天我要学四级</span>
-            <button>删除</button>
-          </li>
-          <li>
-            <i class="iconfont icon-wancheng"></i>
-            <span>今天我要学四级</span>
-            <button>删除</button>
-          </li>
-          <li>
-            <i class="iconfont icon-wancheng"></i>
-            <span>今天我要学四级</span>
-            <button>删除</button>
-          </li>
-          <li>
-            <i class="iconfont icon-wancheng"></i>
-            <span>今天我要学四级</span>
-            <button>删除</button>
-          </li>
-        </ul>
+        <ul id="todo-list-wrapper"></ul>
+        <div class="list-nothing">
+          <div>还没有什么事要做</div>
+          <div>赶紧去添加吧......</div>
+          <div class="text-words">
+            不管梦想有多远，走了多少弯路，总有一天，我们还是会回到，那个最初的地方
+          </div>
+        </div>
       </div>
     </div>
     <div class="todo-history item">
       <div class="title">
         <i class="iconfont icon-lishibiaodan"></i>
-        <span>删除历史</span>
+        <span>历史记录</span>
+        <div class="clear-history-button">
+          <i class="iconfont icon-shanchu"></i>
+          <span>清空历史</span>
+        </div>
       </div>
 
       <div class="history">
         <ul id="history-wrapper">
-          <li>
-            <div class="time">2020-01-03</div>
-            <div class="content">
-              <span>明天我要学四级</span>
-              <i class="iconfont icon-youjiantou"></i>
-            </div>
-            <div class="desc">
-              我日你妈
-            </div>
-          </li>
-          <li>
-            <div class="time">2020-01-03</div>
-            <div class="content">
-              <span>明天我要学四级</span>
-              <i class="iconfont icon-youjiantou"></i>
-            </div>
-            <div class="desc">
-              我日你妈
-            </div>
-          </li>
-          <li>
-            <div class="time">2020-01-03</div>
-            <div class="content">
-              <span>明天我要学四级</span>
-              <i class="iconfont icon-youjiantou"></i>
-            </div>
-            <div class="desc">
-              我日你妈
-            </div>
-          </li>
-          <li>
-            <div class="time">2020-01-03</div>
-            <div class="content">
-              <span>明天我要学四级</span>
-              <i class="iconfont icon-youjiantou"></i>
-            </div>
-            <div class="desc">
-              我日你妈
-            </div>
-          </li>
-          <li>
-            <div class="time">2020-01-03</div>
-            <div class="content">
-              <span>明天我要学四级</span>
-              <i class="iconfont icon-youjiantou"></i>
-            </div>
-            <div class="desc">
-              我日你妈
-            </div>
-          </li>
-          <li>
-            <div class="time">2020-01-03</div>
-            <div class="content">
-              <span>明天我要学四级</span>
-              <i class="iconfont icon-youjiantou"></i>
-            </div>
-            <div class="desc">
-              我日你妈
-            </div>
-          </li>
-          <li>
-            <div class="time">2020-01-03</div>
-            <div class="content">
-              <span>明天我要学四级</span>
-              <i class="iconfont icon-youjiantou"></i>
-            </div>
-            <div class="desc">
-              我日你妈
-            </div>
-          </li>
-          <li>
-            <div class="time">2020-01-03</div>
-            <div class="content">
-              <span>明天我要学四级</span>
-              <i class="iconfont icon-youjiantou"></i>
-            </div>
-            <div class="desc">
-              我日你妈
-            </div>
-          </li>
-          <li>
-            <div class="time">2020-01-03</div>
-            <div class="content">
-              <span>明天我要学四级</span>
-              <i class="iconfont icon-youjiantou"></i>
-            </div>
-            <div class="desc">
-              我日你妈
-            </div>
-          </li>
-          <li>
-            <div class="time">2020-01-03</div>
-            <div class="content">
-              <span>明天我要学四级</span>
-              <i class="iconfont icon-youjiantou"></i>
-            </div>
-            <div class="desc">
-              我日你妈
-            </div>
-          </li>
         </ul>
+        <div class="nothing-todo">
+          nothing to do
+        </div>
       </div>
     </div>
   </main>
   <!-- main-end -->
 
   <!-- aside start -->
-  <aside id="aside"></aside>
+  <aside id="aside">
+    <div class="title">
+      <span>设置</span>
+    </div>
+  </aside>
   <!-- aside end -->
 
   <!-- message html start -->
@@ -269,8 +111,22 @@
   <!-- message html end -->
 
   <!-- mask start -->
-  <div id="mask"></div>
+  <div id="mask">
+  </div>
   <!-- mask end -->
+
+  <!-- messsageBox Start -->
+  <div class="messageBox">
+    <div class="content">
+      <div class="title">提示</div>
+      <span> <i class="iconfont icon-gantanhao"></i> <span id="message-content">这是一个确认消息</span></span>
+      <div class="button-group">
+        <button id="cancel">取消</button>
+        <button id="confirm">确定</button>
+      </div>
+    </div>
+  </div>
+  <!-- messageBox End -->
 </body>
 
 </html>
