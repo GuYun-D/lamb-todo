@@ -1,4 +1,4 @@
-import { settingInit } from './setting.js'
+import { settingInit, switchInit } from './setting.js'
 
 import { getDom, createMessageBox } from '../utils'
 import { addTodo, clearInput } from './add'
