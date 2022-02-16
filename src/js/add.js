@@ -2,6 +2,7 @@ import { createMessageTip, getDom, dateFormat, throttle } from '../utils'
 import { mutations } from './data'
 import { render } from './render'
 import { todoHistoryEmpty, todoListEmpty, todoListAndtodoAddLayout } from './empty'
+import { todoHandledAndAllTodo } from './computed'
 
 const simpleInp = getDom("#simple-inp")
 const detailAddTitle = getDom("#detail-add-title")
@@ -78,6 +79,7 @@ export const addTodo = (focusStr) => {
   todoHistoryEmpty()
   todoListEmpty()
   todoListAndtodoAddLayout()
+  todoHandledAndAllTodo()
 }
 
 window.addEventListener('keydown', throttle(function (e) {

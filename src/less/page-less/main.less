@@ -129,6 +129,7 @@ main {
     overflow: auto;
     flex: 1;
     transition: flex 350ms;
+    position: relative;
 
     .list {
       padding: 10px;
@@ -137,6 +138,7 @@ main {
       ul {
         li {
           .flex();
+          position: relative;
           padding: 5px;
           margin: 10px 0;
           border-radius: @radius;
@@ -177,7 +179,7 @@ main {
             transition: all 350ms;
             overflow: hidden;
             white-space: nowrap;
-            text-decoration: dotted;
+            text-overflow: ellipsis;
           }
 
           button {
@@ -185,6 +187,37 @@ main {
             cursor: pointer;
             transition: all 350ms;
             transition: all 350ms;
+          }
+
+          .todo-item-tip {
+            position: absolute;
+            display: none;
+            font-size: 14px;
+            line-height: 1.5;
+            padding: 6px 12px;
+            background-color: #fff;
+            border-radius: 5px;
+            max-width: 400px;
+            box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+            word-break: break-all;
+            border: 1px solid #ebeef5;
+            color: rgb(46, 46, 46);
+            letter-spacing: 1px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            &::after {
+              content: "";
+              display: block;
+              position: absolute;
+              top: 100%;
+              left: 10px;
+              width: 0;
+              height: 0;
+              border: 10px solid @mainWhite;
+              border-bottom-color: transparent;
+              border-left-color: transparent;
+              border-right-color: transparent;
+            }
           }
         }
       }
@@ -199,6 +232,41 @@ main {
 
           &:nth-child(3) {
             text-indent: 2em;
+          }
+        }
+      }
+    }
+
+    .detail-op {
+      .flex();
+      padding: 10px;
+
+      .analysis {
+        color: @mainWhite;
+
+        span {
+          font-size: 12px;
+
+          span {
+            font-size: 18px;
+            color: @mainColor;
+          }
+        }
+      }
+
+      .list-op {
+        button {
+          color: @mainWhite;
+          cursor: pointer;
+          padding: 5px;
+          color: @mainWhite;
+          background-color: #1d5b58;
+          border-radius: @radius;
+          opacity: 0.8;
+          transition: all 350ms;
+
+          &:hover {
+            opacity: 1;
           }
         }
       }
@@ -250,6 +318,7 @@ main {
             .flex();
             padding-top: 8px;
             margin-bottom: 5px;
+            line-height: 1.5;
 
             i {
               cursor: pointer;

@@ -1,6 +1,6 @@
 import { getDom } from '../utils'
 import { getState } from './data'
-import { deleteTodoItem } from './delete'
+import { deleteTodoItem, changeTodoStatus } from './delete'
 
 const todoListWrapper = getDom("#todo-list-wrapper")
 const historyWrapper = getDom("#history-wrapper")
@@ -28,7 +28,31 @@ export const renderHistory = () => {
 
 function _createTodoTem(rowData) {
   const li = document.createElement("li")
+
+  if (rowData.desc) {
+    const divTip = document.createElement('div')
+    divTip.className = "todo-item-tip"
+    li.appendChild(divTip)
+    divTip.innerText = rowData.desc
+
+    li.addEventListener('mouseenter', function () {
+      divTip.style.display = "block"
+      const elInfo = divTip.getClientRects()[0]
+      divTip.style.top = - elInfo.height - 13 + "px"
+    })
+
+    li.addEventListener('mouseleave', function () {
+      divTip.style.display = "none"
+    })
+  }
+
   const i = document.createElement("i")
+  i.style.color = rowData.done ? "#36ff36" : "#666"
+  i.addEventListener('click', function () {
+    const res = changeTodoStatus(rowData.id)
+    this.style.color = res ? "#36ff36" : "#666"
+  })
+
   const span = document.createElement("span")
   const button = document.createElement("button")
   button.innerText = "删除"

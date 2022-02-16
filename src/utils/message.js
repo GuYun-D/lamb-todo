@@ -29,6 +29,11 @@ export function createMessageTip(text, titleText = "提示", type = "warning", c
     closeTime = 500
   }
 
+  if (type === "warning") {
+    btns.style.display = "none"
+    content.style.paddingBottom = "20px"
+  }
+
   if (messageTimer) clearTimeout(messageTimer)
   messageTimer = setTimeout(() => {
     messageTimer = null

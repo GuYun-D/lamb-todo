@@ -154,6 +154,7 @@ main .todo-list {
   overflow: auto;
   flex: 1;
   transition: flex 350ms;
+  position: relative;
 }
 main .todo-list .list {
   padding: 10px;
@@ -164,6 +165,7 @@ main .todo-list .list ul li {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
+  position: relative;
   padding: 5px;
   margin: 10px 0;
   border-radius: 4px;
@@ -199,12 +201,41 @@ main .todo-list .list ul li span {
   transition: all 350ms;
   overflow: hidden;
   white-space: nowrap;
-  text-decoration: dotted;
+  text-overflow: ellipsis;
 }
 main .todo-list .list ul li button {
   color: #666;
   cursor: pointer;
   transition: all 350ms;
+}
+main .todo-list .list ul li .todo-item-tip {
+  position: absolute;
+  display: none;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 6px 12px;
+  background-color: #fff;
+  border-radius: 5px;
+  max-width: 400px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  word-break: break-all;
+  border: 1px solid #ebeef5;
+  color: #2e2e2e;
+  letter-spacing: 1px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+main .todo-list .list ul li .todo-item-tip::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 10px;
+  width: 0;
+  height: 0;
+  border: 10px solid #fff;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
 }
 main .todo-list .list .list-nothing {
   font-size: 20px;
@@ -216,6 +247,35 @@ main .todo-list .list .list-nothing div {
 }
 main .todo-list .list .list-nothing div:nth-child(3) {
   text-indent: 2em;
+}
+main .todo-list .detail-op {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 10px;
+}
+main .todo-list .detail-op .analysis {
+  color: #fff;
+}
+main .todo-list .detail-op .analysis span {
+  font-size: 12px;
+}
+main .todo-list .detail-op .analysis span span {
+  font-size: 18px;
+  color: limegreen;
+}
+main .todo-list .detail-op .list-op button {
+  cursor: pointer;
+  padding: 5px;
+  color: #fff;
+  background-color: #1d5b58;
+  border-radius: 4px;
+  opacity: 0.8;
+  transition: all 350ms;
+}
+main .todo-list .detail-op .list-op button:hover {
+  opacity: 1;
 }
 main .todo-history {
   overflow: auto;
@@ -257,6 +317,7 @@ main .todo-history .history ul li .content {
   flex-direction: row;
   padding-top: 8px;
   margin-bottom: 5px;
+  line-height: 1.5;
 }
 main .todo-history .history ul li .content i {
   cursor: pointer;
