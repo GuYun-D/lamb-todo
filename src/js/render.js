@@ -52,10 +52,10 @@ function _createTodoTem(rowData) {
   }
 
   const i = document.createElement("i")
-  i.style.color = rowData.done ? "#36ff36" : "#666"
+  i.style.color = rowData.done ? "#35b0d9" : "#666"
   i.addEventListener('click', function () {
     const res = changeTodoStatus(rowData.id)
-    this.style.color = res ? "#36ff36" : "#666"
+    this.style.color = res ? "#35b0d9" : "#666"
   })
 
   const span = document.createElement("span")

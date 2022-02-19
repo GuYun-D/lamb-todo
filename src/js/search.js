@@ -4,14 +4,17 @@ import { getState } from "./data"
 export const serachHistory = () => {
   const searchBtn = getDom(".search-btn")
   const spans = searchBtn.children
+  const isDark = Array.prototype.slice.call(document.body.classList).includes("dark")
+  const mainColor = isDark ? "#FF7A54" : "#fff"
+  console.log(isDark);
   for (let i = 0; i < spans.length; i++) {
     spans[i].addEventListener('click', function () {
       for (let i = 0; i < spans.length; i++) {
         spans[i].style.color = "#666"
         spans[i].style.borderColor = "#666"
       }
-      this.style.color = "#fff"
-      this.style.borderColor = "#fff"
+      this.style.color = mainColor
+      this.style.borderColor = mainColor
       const currentSearchName = this.getAttribute("date-search-name")
       emitter.emit("searchName:change", currentSearchName)
     })

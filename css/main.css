@@ -24,11 +24,17 @@
   color: #fff;
   border-color: #fff;
 }
+.light-button {
+  color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: all 350ms;
+}
 @font-face {
   font-family: gy-history;
   src: url("../../fonts/HeraldryItalic-mLGXG.ttf");
 }
-.lamb-start {
+body.dark .lamb-start {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,12 +50,12 @@
   transition: transform 350ms;
   z-index: 12;
 }
-.lamb-start .title {
+body.dark .lamb-start .title {
   font-family: gy-history;
   font-size: 270px;
   color: darkgray;
 }
-.lamb-start .animation {
+body.dark .lamb-start .animation {
   margin-top: 20px;
   font-size: 20px;
   font-weight: bold;
@@ -57,7 +63,7 @@
   letter-spacing: 5px;
   color: #fff;
 }
-main {
+body.dark main {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -79,7 +85,7 @@ main {
     transform: scale(1);
   }
 }
-main .item {
+body.dark main .item {
   flex: 1;
   height: 100%;
   max-height: 100%;
@@ -89,41 +95,41 @@ main .item {
   margin: 10px;
   border-radius: 20px;
 }
-main .item .title {
+body.dark main .item .title {
   padding: 10px;
   padding-top: 15px;
   color: #666;
 }
-main .item .title span {
+body.dark main .item .title span {
   margin: 0 10px;
 }
-main .item .title .clear-history-button {
+body.dark main .item .title .clear-history-button {
   float: right;
   cursor: pointer;
   transition: all 350ms;
 }
-main .item .title .clear-history-button:hover {
+body.dark main .item .title .clear-history-button:hover {
   color: #fff;
 }
-main .item .title .clear-history-button span {
+body.dark main .item .title .clear-history-button span {
   margin: 0;
 }
-main .form {
+body.dark main .form {
   padding: 10px;
   box-sizing: border-box;
   text-align: right;
 }
-main .form .inp-group {
+body.dark main .form .inp-group {
   box-sizing: border-box;
   margin: 20px 0;
   text-align: left;
 }
-main .form .inp-group span {
+body.dark main .form .inp-group span {
   color: #666;
   padding: 5px 0;
   letter-spacing: 0.5em;
 }
-main .form .inp-group input {
+body.dark main .form .inp-group input {
   display: block;
   width: 98%;
   height: 28px;
@@ -135,12 +141,12 @@ main .form .inp-group input {
   margin-top: 15px;
   text-indent: 1em;
 }
-main .form .inp-group input:focus {
+body.dark main .form .inp-group input:focus {
   color: #fff;
   border-color: #fff;
   box-shadow: 0 0 5px #fff;
 }
-main .form .inp-group textarea {
+body.dark main .form .inp-group textarea {
   display: block;
   box-sizing: border-box;
   width: 99%;
@@ -156,12 +162,12 @@ main .form .inp-group textarea {
   transition: all 350ms;
   text-indent: 1em;
 }
-main .form .inp-group textarea:focus {
+body.dark main .form .inp-group textarea:focus {
   color: #fff;
   border-color: #fff;
   box-shadow: 0 0 5px #fff;
 }
-main .form button {
+body.dark main .form button {
   width: 30%;
   height: 40px;
   border-radius: 4px;
@@ -171,25 +177,25 @@ main .form button {
   cursor: pointer;
   transition: all 350ms;
 }
-main .form button:hover {
+body.dark main .form button:hover {
   color: #fff;
   border-color: #fff;
 }
-main .todo-add {
+body.dark main .todo-add {
   flex: 2;
   transition: flex 350ms;
 }
-main .todo-list {
+body.dark main .todo-list {
   overflow: auto;
   flex: 1;
   transition: flex 350ms;
   position: relative;
 }
-main .todo-list .list {
+body.dark main .todo-list .list {
   padding: 10px;
   padding-top: 0;
 }
-main .todo-list .list ul li {
+body.dark main .todo-list .list ul li {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -202,27 +208,27 @@ main .todo-list .list ul li {
   cursor: pointer;
   transition: all 350ms;
 }
-main .todo-list .list ul li:hover {
+body.dark main .todo-list .list ul li:hover {
   background-color: #767694;
   box-shadow: 0 0 5px #767694;
 }
-main .todo-list .list ul li:hover button {
+body.dark main .todo-list .list ul li:hover button {
   color: #fff;
 }
-main .todo-list .list ul li:hover span {
+body.dark main .todo-list .list ul li:hover span {
   color: #fff;
 }
-main .todo-list .list ul li:hover i.iconfont {
+body.dark main .todo-list .list ul li:hover i.iconfont {
   color: #fff;
 }
-main .todo-list .list ul li i.iconfont {
+body.dark main .todo-list .list ul li i.iconfont {
   font-size: 20px;
   vertical-align: middle;
   color: #666;
   cursor: pointer;
   transition: all 350ms;
 }
-main .todo-list .list ul li span {
+body.dark main .todo-list .list ul li span {
   flex: 1;
   padding: 0 10px;
   font-size: 18px;
@@ -232,12 +238,12 @@ main .todo-list .list ul li span {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-main .todo-list .list ul li button {
+body.dark main .todo-list .list ul li button {
   color: #666;
   cursor: pointer;
   transition: all 350ms;
 }
-main .todo-list .list ul li .todo-item-tip {
+body.dark main .todo-list .list ul li .todo-item-tip {
   position: absolute;
   display: none;
   font-size: 14px;
@@ -253,7 +259,7 @@ main .todo-list .list ul li .todo-item-tip {
   letter-spacing: 1px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-main .todo-list .list ul li .todo-item-tip::after {
+body.dark main .todo-list .list ul li .todo-item-tip::after {
   content: "";
   display: block;
   position: absolute;
@@ -266,35 +272,35 @@ main .todo-list .list ul li .todo-item-tip::after {
   border-left-color: transparent;
   border-right-color: transparent;
 }
-main .todo-list .list .list-nothing {
+body.dark main .todo-list .list .list-nothing {
   font-size: 20px;
 }
-main .todo-list .list .list-nothing div {
+body.dark main .todo-list .list .list-nothing div {
   margin: 20px 0;
   line-height: 1.2;
   color: #40406E;
 }
-main .todo-list .list .list-nothing div:nth-child(3) {
+body.dark main .todo-list .list .list-nothing div:nth-child(3) {
   text-indent: 2em;
 }
-main .todo-list .detail-op {
+body.dark main .todo-list .detail-op {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
   padding: 10px;
 }
-main .todo-list .detail-op .analysis {
+body.dark main .todo-list .detail-op .analysis {
   color: #fff;
 }
-main .todo-list .detail-op .analysis span {
+body.dark main .todo-list .detail-op .analysis span {
   font-size: 12px;
 }
-main .todo-list .detail-op .analysis span span {
+body.dark main .todo-list .detail-op .analysis span span {
   font-size: 18px;
   color: limegreen;
 }
-main .todo-list .detail-op .list-op button {
+body.dark main .todo-list .detail-op .list-op button {
   cursor: pointer;
   padding: 5px;
   color: #fff;
@@ -303,18 +309,18 @@ main .todo-list .detail-op .list-op button {
   opacity: 0.8;
   transition: all 350ms;
 }
-main .todo-list .detail-op .list-op button:hover {
+body.dark main .todo-list .detail-op .list-op button:hover {
   opacity: 1;
 }
-main .todo-history {
+body.dark main .todo-history {
   overflow: auto;
   flex: 2;
 }
-main .todo-history .history {
+body.dark main .todo-history .history {
   padding: 10px;
   padding-top: 0;
 }
-main .todo-history .history #search-history {
+body.dark main .todo-history .history #search-history {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -322,7 +328,7 @@ main .todo-history .history #search-history {
   padding: 5px;
   padding-top: 20px;
 }
-main .todo-history .history #search-history input {
+body.dark main .todo-history .history #search-history input {
   width: 90%;
   flex: 1;
   padding: 5px;
@@ -332,7 +338,7 @@ main .todo-history .history #search-history input {
   color: #fff;
   box-shadow: 0 0 2px #0d5711;
 }
-main .todo-history .history #search-history .search-btn span {
+body.dark main .todo-history .history #search-history .search-btn span {
   margin: 5px;
   padding: 5px;
   border: 1px solid #666;
@@ -342,12 +348,12 @@ main .todo-history .history #search-history .search-btn span {
   cursor: pointer;
   transition: all 350ms;
 }
-main .todo-history .history ul .no-search {
+body.dark main .todo-history .history ul .no-search {
   font-size: 100px;
   font-family: gy-history;
   color: red;
 }
-main .todo-history .history ul li {
+body.dark main .todo-history .history ul li {
   padding: 5px;
   border: 1px solid #666;
   color: #666;
@@ -356,23 +362,23 @@ main .todo-history .history ul li {
   cursor: pointer;
   transition: transform 350ms;
 }
-main .todo-history .history ul li:hover {
+body.dark main .todo-history .history ul li:hover {
   box-shadow: #5e5e5e 0px 0px 30px 5px inset;
   color: #fff;
   transform: scale(1.05);
   border: 1px solid #27571d;
 }
-main .todo-history .history ul li:hover .content i {
+body.dark main .todo-history .history ul li:hover .content i {
   animation: light 800ms linear infinite;
 }
-main .todo-history .history ul li:hover .desc {
+body.dark main .todo-history .history ul li:hover .desc {
   display: block;
 }
-main .todo-history .history ul li .time {
+body.dark main .todo-history .history ul li .time {
   padding: 8px 0;
   border-bottom: 1px solid #666;
 }
-main .todo-history .history ul li .content {
+body.dark main .todo-history .history ul li .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -381,10 +387,10 @@ main .todo-history .history ul li .content {
   margin-bottom: 5px;
   line-height: 1.5;
 }
-main .todo-history .history ul li .content i {
+body.dark main .todo-history .history ul li .content i {
   cursor: pointer;
 }
-main .todo-history .history ul li .desc {
+body.dark main .todo-history .history ul li .desc {
   display: none;
   padding: 10px 0;
   font-size: 14px;
@@ -392,7 +398,379 @@ main .todo-history .history ul li .desc {
   text-indent: 2em;
   font-weight: 100;
 }
-main .todo-history .history .nothing-todo {
+body.dark main .todo-history .history .nothing-todo {
+  display: none;
+  font-family: gy-history;
+  font-size: 100px;
+  margin-top: 30px;
+  color: #40406E;
+}
+body.light .lamb-start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  transform: translateY(-40px);
+  background-color: #fff2d9;
+  transition: transform 350ms;
+  z-index: 12;
+}
+body.light .lamb-start .title {
+  font-family: gy-history;
+  font-size: 270px;
+  color: #FF7A54;
+}
+body.light .lamb-start .animation {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 5px;
+  color: #313131;
+}
+body.light main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  height: calc(100% - 60px);
+  min-height: calc(100% - 60px);
+  max-height: calc(100% - 60px);
+  box-sizing: border-box;
+  padding: 20px 10px;
+  background-color: #E7E1E3;
+}
+@keyframes light {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+body.light main .item {
+  flex: 1;
+  height: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 10px 10px 0px #ccc;
+}
+body.light main .item .title {
+  padding: 20px;
+  padding-top: 15px;
+  color: #FF7A54;
+  font-weight: bold;
+}
+body.light main .item .title span {
+  margin: 0 10px;
+}
+body.light main .item .title .clear-history-button {
+  float: right;
+  cursor: pointer;
+  transition: all 350ms;
+}
+body.light main .item .title .clear-history-button:hover {
+  color: #fff;
+}
+body.light main .item .title .clear-history-button span {
+  margin: 0;
+}
+body.light main .form {
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: right;
+}
+body.light main .form .inp-group {
+  box-sizing: border-box;
+  margin: 20px 0;
+  text-align: left;
+}
+body.light main .form .inp-group span {
+  color: #666;
+  padding: 5px 0;
+  letter-spacing: 0.5em;
+}
+body.light main .form .inp-group input {
+  display: block;
+  width: 98%;
+  height: 28px;
+  background-color: #fff;
+  border: 1px solid #666;
+  border-radius: 20px;
+  color: #313131;
+  transition: all 350ms;
+  margin-top: 15px;
+  text-indent: 1em;
+}
+body.light main .form .inp-group input:focus {
+  border: 1px solid #FF7A54;
+}
+body.light main .form .inp-group textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 99%;
+  height: 100px;
+  border: 1px solid #666;
+  outline: none;
+  resize: none;
+  border-radius: 20px;
+  margin-top: 15px;
+  padding: 20px;
+  font-size: 16px;
+  color: #313131;
+  background-color: #fff;
+  transition: all 350ms;
+}
+body.light main .form .inp-group textarea:focus {
+  border: 1px solid #FF7A54;
+}
+body.light main .form button {
+  width: 30%;
+  height: 40px;
+  border-radius: 4px;
+  margin: 0 5px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1em;
+  opacity: 0.8;
+  cursor: pointer;
+  background-color: #FF7A54;
+  transition: all 350ms;
+}
+body.light main .form button:hover {
+  opacity: 1;
+}
+body.light main .todo-add {
+  flex: 2;
+  transition: flex 350ms;
+  padding: 20px;
+}
+body.light main .todo-list {
+  overflow: auto;
+  flex: 1;
+  transition: flex 350ms;
+  position: relative;
+}
+body.light main .todo-list .list {
+  padding: 10px;
+  padding-top: 0;
+}
+body.light main .todo-list .list ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  position: relative;
+  padding: 8px;
+  margin: 10px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f1eeec;
+  transition: all 350ms;
+}
+body.light main .todo-list .list ul li:hover {
+  background-color: #767694;
+  box-shadow: 0 0 5px #767694;
+}
+body.light main .todo-list .list ul li:hover button {
+  color: #fff;
+}
+body.light main .todo-list .list ul li:hover span {
+  color: #fff;
+}
+body.light main .todo-list .list ul li:hover i.iconfont {
+  color: #fff;
+}
+body.light main .todo-list .list ul li i.iconfont {
+  font-size: 20px;
+  vertical-align: middle;
+  color: #666;
+  cursor: pointer;
+  transition: all 350ms;
+}
+body.light main .todo-list .list ul li span {
+  flex: 1;
+  padding: 0 10px;
+  font-size: 18px;
+  color: #313131;
+  transition: all 350ms;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+body.light main .todo-list .list ul li button {
+  color: #666;
+  cursor: pointer;
+  transition: all 350ms;
+}
+body.light main .todo-list .list ul li .todo-item-tip {
+  position: absolute;
+  display: none;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 6px 12px;
+  background-color: #363646;
+  border-radius: 5px;
+  max-width: 400px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  word-break: break-all;
+  border: 1px solid #ebeef5;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body.light main .todo-list .list ul li .todo-item-tip::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 10px;
+  width: 0;
+  height: 0;
+  border: 10px solid #363646;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+body.light main .todo-list .list .list-nothing {
+  font-size: 20px;
+}
+body.light main .todo-list .list .list-nothing div {
+  margin: 20px 0;
+  line-height: 1.2;
+  color: #666;
+  padding: 0 20px;
+}
+body.light main .todo-list .list .list-nothing div:nth-child(3) {
+  text-indent: 2em;
+}
+body.light main .todo-list .detail-op {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 10px;
+}
+body.light main .todo-list .detail-op .analysis {
+  color: #666;
+}
+body.light main .todo-list .detail-op .analysis span {
+  font-size: 12px;
+}
+body.light main .todo-list .detail-op .analysis span span {
+  font-size: 18px;
+  color: limegreen;
+}
+body.light main .todo-list .detail-op .list-op button {
+  cursor: pointer;
+  padding: 5px;
+  color: #fff;
+  background-color: #323838;
+  border-radius: 4px;
+  opacity: 0.8;
+  transition: all 350ms;
+}
+body.light main .todo-list .detail-op .list-op button:hover {
+  opacity: 1;
+}
+body.light main .todo-history {
+  overflow: auto;
+  flex: 2;
+}
+body.light main .todo-history .history {
+  padding: 10px;
+  padding-top: 0;
+}
+body.light main .todo-history .history #search-history {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 5px;
+  padding-top: 20px;
+}
+body.light main .todo-history .history #search-history input {
+  width: 90%;
+  flex: 1;
+  padding: 5px;
+  border-radius: 5px;
+  background: #fff;
+  border: 1px solid #666;
+  color: #313131;
+}
+body.light main .todo-history .history #search-history .search-btn span {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #666;
+  border-radius: 5px;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 350ms;
+}
+body.light main .todo-history .history ul .no-search {
+  font-size: 100px;
+  font-family: gy-history;
+  color: red;
+}
+body.light main .todo-history .history ul li {
+  padding: 5px;
+  color: #fff;
+  border-radius: 4px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 350ms;
+}
+body.light main .todo-history .history ul li:nth-child(n) {
+  background: #be9336;
+}
+body.light main .todo-history .history ul li:nth-child(2n) {
+  background-color: #8fd6fa;
+}
+body.light main .todo-history .history ul li:hover .content i {
+  animation: light 800ms linear infinite;
+}
+body.light main .todo-history .history ul li:hover .desc {
+  display: block;
+}
+body.light main .todo-history .history ul li .time {
+  padding: 8px 0;
+  border-bottom: 1px solid #666;
+}
+body.light main .todo-history .history ul li .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-top: 8px;
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+body.light main .todo-history .history ul li .content i {
+  cursor: pointer;
+}
+body.light main .todo-history .history ul li .desc {
+  display: none;
+  padding: 10px 0;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-indent: 2em;
+  font-weight: 100;
+}
+body.light main .todo-history .history .nothing-todo {
   display: none;
   font-family: gy-history;
   font-size: 100px;

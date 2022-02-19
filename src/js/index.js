@@ -7,6 +7,7 @@ import { todoHistoryEmpty, todoListEmpty, todoListAndtodoAddLayout } from './emp
 import { todoHandledAndAllTodo } from './computed'
 import { getState } from './data.js'
 import { serachHistory, searchLocalTodo } from './search'
+import { changeTheme } from './chnageTheme'
 
 const settings = localStorage.getItem("SETTINGS")
 
@@ -21,6 +22,7 @@ window.addEventListener('load', function () {
   const nothingTodo = getDom("#history-wrapper")
   const historyWrapper = getDom("#history-wrapper")
   const anWrapper = getDom(".an-wrapper")
+  const themeBtn = getDom("#theme-change")
   let searchName = ""
 
   if (settings.isPlayMusic) {
@@ -72,6 +74,10 @@ window.addEventListener('load', function () {
   })
 
   searchInp.addEventListener("input", debounce(_searchTodo, 300, true))
+
+  themeBtn.addEventListener('click', function () {
+    changeTheme()
+  })
 
   serachHistory()
   render()

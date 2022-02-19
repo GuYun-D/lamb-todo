@@ -3,7 +3,7 @@
     transform: rotate(360deg);
   }
 }
-aside {
+body.dark aside {
   position: absolute;
   left: 0;
   top: 0;
@@ -19,19 +19,19 @@ aside {
   padding: 20px;
   box-shadow: 7px 0px 5px rgba(0, 0, 0, 0.2);
 }
-aside .title {
+body.dark aside .title {
   font-size: 20px;
   letter-spacing: 2em;
   padding-bottom: 5px;
   border-bottom: 1px solid #fff;
 }
-aside ul li {
+body.dark aside ul li {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 30px;
 }
-aside ul li .switch-button {
+body.dark aside ul li .switch-button {
   position: relative;
   width: 60px;
   height: 30px;
@@ -41,7 +41,7 @@ aside ul li .switch-button {
   padding: 3px;
   cursor: pointer;
 }
-aside ul li .switch-button .dot {
+body.dark aside ul li .switch-button .dot {
   display: block;
   position: absolute;
   top: 50%;
@@ -53,7 +53,7 @@ aside ul li .switch-button .dot {
   background-color: #fff;
   transition: left 350ms;
 }
-aside button {
+body.dark aside button {
   margin-left: 30px;
   margin-bottom: 200px;
   padding: 10px;
@@ -65,13 +65,84 @@ aside button {
   opacity: 0.8;
   transition: opacity 350ms;
 }
-aside button:hover {
+body.dark aside button:hover {
   opacity: 1;
 }
-aside .setting-tip {
+body.dark aside .setting-tip {
   width: 100%;
   text-align: right;
   font-size: 14px;
   color: #f7b52c;
+  letter-spacing: 1.6px;
+}
+body.light aside {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  background-color: #FF7A54;
+  transform: translateX(-100%);
+  transition: all 350ms;
+  color: #fff;
+  z-index: 20;
+  padding: 20px;
+  box-shadow: 7px 0px 5px rgba(0, 0, 0, 0.2);
+}
+body.light aside .title {
+  font-size: 20px;
+  letter-spacing: 2em;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #fff;
+}
+body.light aside ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px;
+}
+body.light aside ul li .switch-button {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: #666;
+  overflow: hidden;
+  border-radius: 30px;
+  padding: 3px;
+  cursor: pointer;
+}
+body.light aside ul li .switch-button .dot {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #fff;
+  transition: left 350ms;
+}
+body.light aside button {
+  margin-left: 30px;
+  margin-bottom: 200px;
+  padding: 10px;
+  color: #313131;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 350ms;
+}
+body.light aside button:hover {
+  opacity: 1;
+}
+body.light aside .setting-tip {
+  width: 100%;
+  text-align: right;
+  font-size: 14px;
+  color: #fff;
   letter-spacing: 1.6px;
 }

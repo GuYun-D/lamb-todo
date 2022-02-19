@@ -3,78 +3,164 @@
 
 
 
-header {
-  position: relative;
-  .flex(row);
-  width: 100%;
-  height: 60px;
-  padding: 0 30px;
-  box-sizing: border-box;
-  border-bottom: 1px solid @gary;
-  z-index: 13;
+body.dark {
+  header {
+    position: relative;
+    .flex(row);
+    width: 100%;
+    height: 60px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    border-bottom: 1px solid @gary;
+    z-index: 13;
 
-  h1 {
-    letter-spacing: 4px;
-    font-size: 30px;
-    font-weight: bold;
-    margin: 0 20px 0 50px;
-    background-image: -webkit-linear-gradient(left, #648369, #4e5a94, #373156);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  span {
-    margin: 0 30px;
-    vertical-align: center;
-    cursor: pointer;
-    font-size: 14px;
-    color: @gary;
-    transition: all 350ms;
-
-    &:hover {
-      color: @mainWhite
+    h1 {
+      letter-spacing: 4px;
+      font-size: 30px;
+      font-weight: bold;
+      margin: 0 20px 0 50px;
+      background-image: -webkit-linear-gradient(left, #648369, #4e5a94, #373156);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    i.iconfont {
-      font-size: 20px;
+    span {
+      margin: 0 30px;
+      vertical-align: center;
       cursor: pointer;
-      vertical-align: middle
+      font-size: 14px;
+      color: @gary;
+      transition: all 350ms;
+
+      &:hover {
+        color: @mainWhite
+      }
+
+      i.iconfont {
+        font-size: 20px;
+        cursor: pointer;
+        vertical-align: middle
+      }
+
+      i.icon-vynil {
+        .header-item(@mainBlue, 1);
+      }
+
+      i.icon-shezhixitongshezhigongnengshezhishuxing-xian {
+        .header-item(@mainOrg, 1);
+      }
+
+      i.icon-pifu {
+        .header-item(rgb(247, 255, 140), 1);
+      }
     }
 
-    i.icon-vynil {
-      .header-item(@mainBlue, 1);
+    input {
+      color: @mainWhite;
+      background-color: @mainBgc;
+      border: 1px solid @gary;
+      flex: 10;
+      padding: 6px;
+      border-radius: @radius;
+      transition: width 350ms;
+      .interactive-focus();
     }
 
-    i.icon-shezhixitongshezhigongnengshezhishuxing-xian {
-      .header-item(@mainOrg, 1);
+    button {
+      min-width: 40px;
+      padding: 5px;
+      margin: 0 20px;
+      border-radius: @radius;
+      .button();
     }
-
-    i.icon-pifu {
-      .header-item(rgb(247, 255, 140), 1);
-    }
-  }
-
-  input {
-    color: @mainWhite;
-    background-color: @mainBgc;
-    border: 1px solid @gary;
-    flex: 10;
-    padding: 6px;
-    border-radius: @radius;
-    transition: width 350ms;
-    .interactive-focus();
-  }
-
-  button {
-    min-width: 40px;
-    padding: 5px;
-    margin: 0 20px;
-    border-radius: @radius;
-    .button();
   }
 }
 
-#mask{
+body.light {
+  header {
+    position: relative;
+    .flex(row);
+    width: 100%;
+    height: 60px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    border-bottom: 1px solid @light-main-color;
+    background-color: @light-main-color;
+    z-index: 13;
+
+    h1 {
+      letter-spacing: 4px;
+      font-size: 30px;
+      font-weight: bold;
+      margin: 0 20px 0 50px;
+      background-image: -webkit-linear-gradient(left, #ffe550, #1deef5, #ffffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    span {
+      margin: 0 30px;
+      vertical-align: center;
+      cursor: pointer;
+      font-size: 14px;
+      color: @mainWhite;
+      transition: all 350ms;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+
+      i.iconfont {
+        font-size: 20px;
+        cursor: pointer;
+        vertical-align: middle
+      }
+
+      i.icon-vynil {
+        .header-item(#07fa6c, 1);
+      }
+
+      i.icon-shezhixitongshezhigongnengshezhishuxing-xian {
+        .header-item(#0beee3, 1);
+      }
+
+      i.icon-pifu {
+        .header-item(rgb(247, 255, 140), 1);
+      }
+    }
+
+    input {
+      color: @light-main-text-color;
+      background-color: @mainWhite;
+      flex: 10;
+      padding: 6px;
+      border-radius: @radius;
+      transition: width 350ms;
+      .interactive-focus();
+
+      &:focus{
+        color: rgb(49, 49, 49);
+      }
+    }
+
+    button {
+      min-width: 40px;
+      padding: 5px;
+      margin: 0 20px;
+      border-radius: @radius;
+      opacity: .9;
+      background-color: #E67323;
+      .light-button();
+
+      &:hover{
+        background-color: @mainWhite;
+        color: @light-main-text-color;
+      }
+    }
+  }
+}
+
+#mask {
   display: none;
   width: 100%;
   height: 100%;
