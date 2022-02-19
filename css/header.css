@@ -25,6 +25,7 @@
   border-color: #fff;
 }
 header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,6 +35,7 @@ header {
   padding: 0 30px;
   box-sizing: border-box;
   border-bottom: 1px solid #666;
+  z-index: 13;
 }
 header h1 {
   letter-spacing: 4px;
@@ -82,7 +84,7 @@ header input {
   flex: 10;
   padding: 6px;
   border-radius: 4px;
-  transition: all 350ms;
+  transition: width 350ms;
   text-indent: 1em;
 }
 header input:focus {
@@ -112,4 +114,5 @@ header button:hover {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 14;
 }

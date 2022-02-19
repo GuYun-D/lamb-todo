@@ -86,4 +86,4 @@ window.addEventListener('keydown', throttle(function (e) {
   if (e.key === "Enter" && onFocus) {
     onFocus === focusType.simple ? addTodo() : addTodo("DETAIL")
   }
-}, 500))
+}, 300))

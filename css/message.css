@@ -40,6 +40,7 @@
   animation: showMessage 350ms linear;
   transform: translateY(-120%);
   transition: all 300ms;
+  z-index: 20;
 }
 .message-wrapper #message {
   width: 100%;

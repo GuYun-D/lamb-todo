@@ -1,9 +1,9 @@
 @import url('./variable');
 
-.flex(@direction: row) {
+.flex(@direction: row, @content: space-between) {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: @content;
   flex-direction: @direction;
 }
 
@@ -26,7 +26,7 @@
 
 .interactive-focus {
   text-indent: 1em;
-  
+
   &:focus {
     .interactive();
     box-shadow: 0 0 5px @mainWhite;

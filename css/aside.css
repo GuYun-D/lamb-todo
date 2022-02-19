@@ -15,7 +15,7 @@ aside {
   transform: translateX(-100%);
   transition: all 350ms;
   color: #fff;
-  z-index: 10;
+  z-index: 20;
   padding: 20px;
   box-shadow: 7px 0px 5px rgba(0, 0, 0, 0.2);
 }
@@ -55,6 +55,7 @@ aside ul li .switch-button .dot {
 }
 aside button {
   margin-left: 30px;
+  margin-bottom: 200px;
   padding: 10px;
   border: 1px solid limegreen;
   color: #fff;
@@ -66,4 +67,11 @@ aside button {
 }
 aside button:hover {
   opacity: 1;
+}
+aside .setting-tip {
+  width: 100%;
+  text-align: right;
+  font-size: 14px;
+  color: #f7b52c;
+  letter-spacing: 1.6px;
 }

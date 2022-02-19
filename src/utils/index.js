@@ -7,6 +7,7 @@ import { createMask, closeMask } from './showMask'
 import emitter from './eventBus'
 import { createMessageBox } from './messageBox'
 import { throttle } from './throttle'
+import { debounce } from './debounce'
 
 export {
   localStorage,
@@ -20,4 +21,5 @@ export {
   createMessageBox,
   closeMask,
   throttle,
+  debounce
 }

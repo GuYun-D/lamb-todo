@@ -1,5 +1,5 @@
 import { settingInit } from './setting.js'
-import { getDom, createMessageBox, createMessageTip, emitter } from '../utils'
+import { getDom, createMessageBox, createMessageTip, emitter, debounce, printer, localStorage } from '../utils'
 import { addTodo, clearInput } from './add'
 import { render, renderHistory } from './render'
 import { clearHistory, clearHandledTodo, clearTodoList } from './delete'
@@ -7,6 +7,8 @@ import { todoHistoryEmpty, todoListEmpty, todoListAndtodoAddLayout } from './emp
 import { todoHandledAndAllTodo } from './computed'
 import { getState } from './data.js'
 import { serachHistory, searchLocalTodo } from './search'
+
+const settings = localStorage.getItem("SETTINGS")
 
 window.addEventListener('load', function () {
   const simpleAddButton = getDom("#simple-add-button")
@@ -18,8 +20,16 @@ window.addEventListener('load', function () {
   const searchInp = getDom("#searchInp")
   const nothingTodo = getDom("#history-wrapper")
   const historyWrapper = getDom("#history-wrapper")
+  const anWrapper = getDom(".an-wrapper")
   let searchName = ""
 
+  if (settings.isPlayMusic) {
+    printer(anWrapper, "一个简单而又丰富的todo，支持历史查看，音乐播放，皮肤切换...... ", 100, function () {
+      anWrapper.parentNode.style.transform = "translateX(-100%)"
+    })
+  } else {
+    anWrapper.parentNode.style.transform = "translateX(-100%)"
+  }
 
   todoHistoryEmpty()
   todoListEmpty()
@@ -61,9 +71,7 @@ window.addEventListener('load', function () {
     clearTodoList()
   })
 
-  searchInp.addEventListener("input", function () {
-    _searchTodo()
-  })
+  searchInp.addEventListener("input", debounce(_searchTodo, 300, true))
 
   serachHistory()
   render()
@@ -76,7 +84,7 @@ window.addEventListener('load', function () {
 
   function _searchTodo() {
     const result = searchLocalTodo(searchName, searchInp.value)
-    if (!result.length || !result) {
+    if (!result.length || result.length === 0) {
       console.log("执行了");
       nothingTodo.innerText = ""
       const spanNothing = document.createElement("span")

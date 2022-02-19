@@ -1,0 +1,26 @@
+.interactive {
+  color: #fff;
+  border-color: #fff;
+}
+.interactive-hover:hover {
+  color: #fff;
+  border-color: #fff;
+}
+.interactive-focus {
+  text-indent: 1em;
+}
+.interactive-focus:focus {
+  color: #fff;
+  border-color: #fff;
+  box-shadow: 0 0 5px #fff;
+}
+.button {
+  color: #666;
+  border: 1px solid #666;
+  cursor: pointer;
+  transition: all 350ms;
+}
+.button:hover {
+  color: #fff;
+  border-color: #fff;
+}

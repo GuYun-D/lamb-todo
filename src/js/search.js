@@ -24,12 +24,12 @@ export const searchLocalTodo = (key, searchValue) => {
   return todoHistory.filter(item => {
     const res = item[searchKey]
     if(typeof res === "undefined"){
-      return []
+      return false
     }
     if (res.length) {
       return item[searchKey].includes(searchValue)
     } else {
-      return []
+      return false
     }
   })
 }

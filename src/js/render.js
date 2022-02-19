@@ -1,9 +1,10 @@
-import { getDom } from '../utils'
+import { getDom, printer } from '../utils'
 import { getState } from './data'
 import { deleteTodoItem, changeTodoStatus } from './delete'
 
 const todoListWrapper = getDom("#todo-list-wrapper")
 const historyWrapper = getDom("#history-wrapper")
+const searchHistoryEl = getDom("#search-history")
 
 export const render = () => {
   renderHistory()
@@ -20,6 +21,7 @@ export const renderTodoList = () => {
 
 export const renderHistory = (isSearch, searchList) => {
   let renderList = getState().todoHistory
+  searchHistoryEl.style.display = !renderList.length ? "none" : "flex"
   if (isSearch) {
     renderList = searchList
   }
@@ -102,6 +104,6 @@ function _createHistoryTem(rowData) {
   if (rowData.desc) {
     li.appendChild(descDive)
   }
-  
+
   historyWrapper.appendChild(li)
 }
