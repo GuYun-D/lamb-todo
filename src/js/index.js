@@ -9,7 +9,9 @@ import { getState } from './data.js'
 import { serachHistory, searchLocalTodo } from './search'
 import { changeTheme } from './chnageTheme'
 
-const settings = localStorage.getItem("SETTINGS")
+const settings = localStorage.getItem("SETTINGS") || {
+  isPlayMusic: true
+}
 
 window.addEventListener('load', function () {
   const simpleAddButton = getDom("#simple-add-button")
