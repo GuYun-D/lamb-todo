@@ -19,5 +19,5 @@ export {
   emitter,
   createMessageBox,
   closeMask,
-  throttle
+  throttle,
 }

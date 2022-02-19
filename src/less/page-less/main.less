@@ -281,12 +281,47 @@ main {
       padding: 10px;
       padding-top: 0;
 
+      #search-history {
+        .flex(column);
+        padding: 5px;
+        padding-top: 20px;
+
+        input {
+          width: 90%;
+          flex: 1;
+          padding: 5px;
+          border-radius: 5px;
+          background: @mainBgc;
+          border: 1px solid @mainWhite;
+          color: @mainWhite;
+          box-shadow: 0 0 2px rgb(13, 87, 17);
+        }
+
+        .search-btn {
+          span {
+            margin: 5px;
+            padding: 5px;
+            border: 1px solid @gary;
+            border-radius: 5px;
+            color: @gary;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 350ms;
+          }
+        }
+      }
+
       ul {
+        .no-search{
+          font-size: 100px;
+          font-family: gy-history;
+          color: red;
+        }
+
         li {
           padding: 5px;
           border: 1px solid @gary;
           color: @gary;
-          // box-shadow: rgb(94, 94, 94) 0px 0px 30px 5px inset;
           border-radius: @radius;
           margin: 10px;
           cursor: pointer;

@@ -285,6 +285,39 @@ main .todo-history .history {
   padding: 10px;
   padding-top: 0;
 }
+main .todo-history .history #search-history {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 5px;
+  padding-top: 20px;
+}
+main .todo-history .history #search-history input {
+  width: 90%;
+  flex: 1;
+  padding: 5px;
+  border-radius: 5px;
+  background: #363646;
+  border: 1px solid #fff;
+  color: #fff;
+  box-shadow: 0 0 2px #0d5711;
+}
+main .todo-history .history #search-history .search-btn span {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #666;
+  border-radius: 5px;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 350ms;
+}
+main .todo-history .history ul .no-search {
+  font-size: 100px;
+  font-family: gy-history;
+  color: red;
+}
 main .todo-history .history ul li {
   padding: 5px;
   border: 1px solid #666;

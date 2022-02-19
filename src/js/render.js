@@ -18,11 +18,14 @@ export const renderTodoList = () => {
   }
 }
 
-export const renderHistory = () => {
-  const { todoHistory } = getState()
+export const renderHistory = (isSearch, searchList) => {
+  let renderList = getState().todoHistory
+  if (isSearch) {
+    renderList = searchList
+  }
   historyWrapper.innerText = ""
-  for (let i = 0; i < todoHistory.length; i++) {
-    _createHistoryTem(todoHistory[i])
+  for (let i = 0; i < renderList.length; i++) {
+    _createHistoryTem(renderList[i])
   }
 }
 
@@ -99,7 +102,6 @@ function _createHistoryTem(rowData) {
   if (rowData.desc) {
     li.appendChild(descDive)
   }
-
-
+  
   historyWrapper.appendChild(li)
 }
