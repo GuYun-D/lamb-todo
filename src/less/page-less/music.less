@@ -1,0 +1,87 @@
+@import url("../variable.less");
+
+
+#music-wrapper {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, -120%);
+  width: 600px;
+  height: 180px;
+  box-shadow: 0 0 5px @gary;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: hidden;
+  z-index: 14;
+
+  .player {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    z-index: 15;
+    margin: 20;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    .main {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .buttons .iconfont {
+      font-size: 30px;
+      margin-right: 8px;
+      cursor: pointer;
+      vertical-align: middle;
+      transition: opacity .3s;
+
+      &:hover {
+        opacity: .7;
+      }
+
+      &.icon-play_pause {
+        font-size: 30px;
+      }
+
+      &.icon-play {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .texts {
+    margin-left: 20px;
+
+    h3 {
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    margin-bottom: 10px;
+  }
+
+  .bar {
+    margin: 20px 0;
+    height: 3px;
+    background-color: #ccc;
+    border-radius: 3px;
+
+    .progress {
+      height: 100%;
+      background-color: currentColor;
+      border-radius: 3px;
+      transition: width 200ms;
+    }
+  }
+
+  .time {
+    text-align: right;
+    margin-top: 8px;
+  }
+}

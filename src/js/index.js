@@ -1,5 +1,5 @@
 import { settingInit } from './setting.js'
-import { getDom, createMessageBox, createMessageTip, emitter, debounce, printer, localStorage } from '../utils'
+import { getDom, createMessageBox, createMessageTip, emitter, debounce, printer, localStorage, createMask } from '../utils'
 import { addTodo, clearInput } from './add'
 import { render, renderHistory } from './render'
 import { clearHistory, clearHandledTodo, clearTodoList } from './delete'
@@ -25,6 +25,9 @@ window.addEventListener('load', function () {
   const historyWrapper = getDom("#history-wrapper")
   const anWrapper = getDom(".an-wrapper")
   const themeBtn = getDom("#theme-change")
+  const showMusic = getDom("#show-music")
+  const musicWraEl = getDom("#music-wrapper")
+
   let searchName = ""
 
   if (settings.isPlayMusic) {
@@ -79,6 +82,12 @@ window.addEventListener('load', function () {
 
   themeBtn.addEventListener('click', function () {
     changeTheme()
+  })
+
+  showMusic.addEventListener("click", function () {
+    import('./music.js')
+    musicWraEl.style.transform = "translate(-50%, 0)"
+    createMask(musicWraEl)
   })
 
   serachHistory()
